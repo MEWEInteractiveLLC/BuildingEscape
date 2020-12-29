@@ -3,6 +3,8 @@
 
 #include "OpenDoor.h"
 
+#include "Engine/TriggerVolume.h"
+
 // Sets default values for this component's properties
 UOpenDoor::UOpenDoor()
 {
@@ -37,13 +39,23 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	CurrentYaw = FMath::FInterpConstantTo(CurrentYaw, TargetYaw, DeltaTime, OpeningSpeed);
-	FRotator FinalRot(0.f, 0.0f, 0.f);
-	FinalRot.Yaw = CurrentYaw;
-	GetOwner()->SetActorRelativeRotation(FinalRot);
+	if (PressurePlate && ActorThatOpensDoor && PressurePlate->IsOverlappingActor(ActorThatOpensDoor))
+	{
+		OpenDoor(DeltaTime);
+	}
+
+	
 
 	
 
 	// ...
+}
+
+void UOpenDoor::OpenDoor(float DeltaTime)
+{
+	CurrentYaw = FMath::FInterpConstantTo(CurrentYaw, TargetYaw, DeltaTime, OpeningSpeed);
+	FRotator FinalRot(0.f, 0.0f, 0.f);
+	FinalRot.Yaw = CurrentYaw;
+	GetOwner()->SetActorRelativeRotation(FinalRot);
 }
 

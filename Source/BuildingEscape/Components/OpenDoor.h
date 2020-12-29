@@ -27,16 +27,44 @@ public:
 
 private:
 
+#pragma region Private Variable
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
 	float TargetYaw = 90.f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
 	float OpeningSpeed = 0.02f;
 
-
-
 	float InitialYaw;
 	float CurrentYaw;
+#pragma endregion
+	
+
+
+
+	
+
+#pragma region Private Functions
+
+	void OpenDoor(float DeltaTime);
+	
+#pragma endregion 
+
+
+public:
+
+#pragma region Reference Variables
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class ATriggerVolume* PressurePlate;
+
+	UPROPERTY(EditAnywhere)
+	AActor* ActorThatOpensDoor;
+	
+#pragma endregion
+
+#pragma region Public Functions
+	
+#pragma endregion
 
 		
 };
