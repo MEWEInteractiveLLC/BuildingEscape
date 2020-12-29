@@ -6,11 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7deb1c8f-4884-419b-a595-c21aeffdc3c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BuildingEscape.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/BuildingEscape.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/Brass.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Materials/Brass.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/Broken_Concrete.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Materials/Broken_Concrete.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Materials/Wood.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Materials/Wood.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Meshes/2x1_Door_and_Frame_Frame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Meshes/2x1_Door_and_Frame_Frame.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +27,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mGFfVuq56qDpanP6YLEgUC7RaJ" />
@@ -363,6 +369,7 @@
       <updated>1609112126566</updated>
       <workItem from="1609112166661" duration="2868000" />
       <workItem from="1609183625332" duration="1008000" />
+      <workItem from="1609212592297" duration="5464000" />
     </task>
     <servers />
   </component>

@@ -167,6 +167,7 @@
     <content url="file://D:/UE_4.26/Engine/Plugins/Lumin/MagicLeapPassableWorld" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Lumin/MagicLeapSharedFile" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Lumin/MagicLeapTablet" />
+    <content url="file://D:/UE_4.26/Engine/Plugins/Marketplace/NodeGraphAssistant" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/AjaMedia" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/AndroidCamera" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/AndroidMedia" />
@@ -188,6 +189,7 @@
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/TimecodeSynchronizer" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/WebMMedia" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Media/WmfMedia" />
+    <content url="file://D:/UE_4.26/Engine/Plugins/MegascansPlugin" />
     <content url="file://D:/UE_4.26/Engine/Plugins/MeshPainting" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Messaging/MessagingDebugger" />
     <content url="file://D:/UE_4.26/Engine/Plugins/Messaging/TcpMessaging" />

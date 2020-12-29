@@ -12559,6 +12559,57 @@
         </e>
       </e>
     </e>
+    <e p="D:\UE_4.26\Engine\Plugins\Marketplace\NodeGraphAssistant" t="Include">
+      <e p="NodeGraphAssistant.uplugin" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="Icon128.png" t="Include" />
+        <e p="nga_cutoff_cursor.cur" t="Include" />
+        <e p="nga_cutoff_cursor.png" t="Include" />
+        <e p="nga_icon_auto_connect_16x.png" t="Include" />
+        <e p="nga_icon_auto_connect_40x.png" t="Include" />
+        <e p="nga_icon_cycle_wire_style_16x.png" t="Include" />
+        <e p="nga_icon_cycle_wire_style_40x.png" t="Include" />
+        <e p="nga_icon_insert_node_16x.png" t="Include" />
+        <e p="nga_icon_insert_node_40x.png" t="Include" />
+        <e p="nga_icon_wire_color.png" t="Include" />
+      </e>
+      <e p="Source" t="Include">
+        <e p="NodeGraphAssistant.Build.cs" t="Include" />
+        <e p="Private" t="Include">
+          <e p="ConnectionDrawingPolicy" t="Include">
+            <e p="NGAAnimGraphConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="NGAAnimGraphConnectionDrawingPolicy.h" t="Include" />
+            <e p="NGABlueprintConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="NGABlueprintConnectionDrawingPolicy.h" t="Include" />
+            <e p="NGAGraphConnectionDrawingPolicyCommon.cpp" t="Include" />
+            <e p="NGAGraphConnectionDrawingPolicyCommon.h" t="Include" />
+            <e p="NGAMaterialGraphConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="NGAMaterialGraphConnectionDrawingPolicy.h" t="Include" />
+            <e p="NGASoundCueConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="NGASoundCueConnectionDrawingPolicy.h" t="Include" />
+          </e>
+          <e p="EngineCppFiles" t="Include">
+            <e p="AnimGraphConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="DragConnection.cpp" t="Include" />
+            <e p="MaterialGraphConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="SGraphNodeAnimTransition.cpp" t="Include" />
+            <e p="SoundCueGraphConnectionDrawingPolicy.cpp" t="Include" />
+            <e p="StateMachineConnectionDrawingPolicy.cpp" t="Include" />
+          </e>
+          <e p="NGAEditorStyle.h" t="Include" />
+          <e p="NGAGraphPinConnectionFactory.cpp" t="Include" />
+          <e p="NGAGraphPinConnectionFactory.h" t="Include" />
+          <e p="NGAInputProcessor.cpp" t="Include" />
+          <e p="NGAInputProcessor.h" t="Include" />
+          <e p="NodeGraphAssistantCommands.h" t="Include" />
+          <e p="NodeGraphAssistantConfig.h" t="Include" />
+          <e p="NodeGraphAssistantModule.cpp" t="Include" />
+          <e p="NodeGraphAssistantModule.h" t="Include" />
+          <e p="NodeHelper.cpp" t="Include" />
+          <e p="NodeHelper.h" t="Include" />
+        </e>
+      </e>
+    </e>
     <e p="D:\UE_4.26\Engine\Plugins\Media\AjaMedia" t="Include">
       <e p="AjaMedia.uplugin" t="Include" />
       <e p="Config" t="Include">
@@ -13862,6 +13913,76 @@
         </e>
       </e>
       <e p="WmfMedia.uplugin" t="Include" />
+    </e>
+    <e p="D:\UE_4.26\Engine\Plugins\MegascansPlugin" t="Include">
+      <e p="MegascansPlugin.uplugin" t="Include" />
+      <e p="Resources" t="Include">
+        <e p="Icon128.png" t="Include" />
+        <e p="Icon40x40.png" t="Include" />
+        <e p="Logo32x32.png" t="Include" />
+        <e p="Logo80x80.png" t="Include" />
+      </e>
+      <e p="Source" t="Include">
+        <e p="MegascansPlugin" t="Include">
+          <e p="MegascansPlugin.Build.cs" t="Include" />
+          <e p="Private" t="Include">
+            <e p="AssetImportData.cpp" t="Include" />
+            <e p="AssetImportData.h" t="Include" />
+            <e p="AssetImportDataHandler.cpp" t="Include" />
+            <e p="AssetImportDataHandler.h" t="Include" />
+            <e p="AssetImporters" t="Include">
+              <e p="Import3D.cpp" t="Include" />
+              <e p="Import3D.h" t="Include" />
+              <e p="Import3DPlant.cpp" t="Include" />
+              <e p="Import3DPlant.h" t="Include" />
+              <e p="ImportFactory.cpp" t="Include" />
+              <e p="ImportFactory.h" t="Include" />
+              <e p="ImportSurface.cpp" t="Include" />
+              <e p="ImportSurface.h" t="Include" />
+            </e>
+            <e p="AssetsImportController.cpp" t="Include" />
+            <e p="AssetsImportController.h" t="Include" />
+            <e p="MegascansLiveLinkModule.cpp" t="Include" />
+            <e p="MSPythonBridge.cpp" t="Include" />
+            <e p="MSPythonBridge.h" t="Include" />
+            <e p="TCPServerImp.cpp" t="Include" />
+            <e p="TCPServerImp.h" t="Include" />
+            <e p="Tools" t="Include">
+              <e p="BlendMaterials.cpp" t="Include" />
+              <e p="BlendMaterials.h" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="MaterialBlendingDetails.cpp" t="Include" />
+              <e p="MaterialBlendingDetails.h" t="Include" />
+              <e p="MSSettings.cpp" t="Include" />
+              <e p="MSSettings.h" t="Include" />
+              <e p="MSStyle.cpp" t="Include" />
+              <e p="MSStyle.h" t="Include" />
+              <e p="QMSUIManager.cpp" t="Include" />
+              <e p="QMSUIManager.h" t="Include" />
+              <e p="SMSWindow.cpp" t="Include" />
+              <e p="SMSWindow.h" t="Include" />
+            </e>
+            <e p="Utilities" t="Include">
+              <e p="Analytics.cpp" t="Include" />
+              <e p="Analytics.h" t="Include" />
+              <e p="AssetData.cpp" t="Include" />
+              <e p="AssetData.h" t="Include" />
+              <e p="AssetsDatabase.cpp" t="Include" />
+              <e p="AssetsDatabase.h" t="Include" />
+              <e p="MaterialUtils.cpp" t="Include" />
+              <e p="MaterialUtils.h" t="Include" />
+              <e p="MeshOp.cpp" t="Include" />
+              <e p="MeshOp.h" t="Include" />
+              <e p="MiscUtils.cpp" t="Include" />
+              <e p="MiscUtils.h" t="Include" />
+            </e>
+          </e>
+          <e p="Public" t="Include">
+            <e p="IMegascansLiveLinkModule.h" t="Include" />
+          </e>
+        </e>
+      </e>
     </e>
     <e p="D:\UE_4.26\Engine\Plugins\MeshPainting" t="Include">
       <e p="MeshPainting.uplugin" t="Include" />
@@ -49007,6 +49128,8 @@
           <e p="BuildingEscapeGameModeBase.cpp" t="Include" />
           <e p="BuildingEscapeGameModeBase.h" t="Include" />
           <e p="Components" t="Include">
+            <e p="OpenDoor.cpp" t="Include" />
+            <e p="OpenDoor.h" t="Include" />
             <e p="WorldPosition.cpp" t="Include" />
             <e p="WorldPosition.h" t="Include" />
           </e>
