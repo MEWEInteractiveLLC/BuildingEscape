@@ -6,9 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7deb1c8f-4884-419b-a595-c21aeffdc3c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Materials/ConcreteFloor_Inst.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" afterDir="false" />
     </list>
@@ -23,8 +24,10 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" />
-      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" />
       <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.h" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mGFfVuq56qDpanP6YLEgUC7RaJ" />
@@ -39,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C++" />
+    <property name="settings.editor.selected.configurable" value="RiderCppLiveTemplatesSettingsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="C++ Project.BuildingEscape">
@@ -368,6 +371,9 @@
       <workItem from="1609183625332" duration="1008000" />
       <workItem from="1609212592297" duration="5464000" />
       <workItem from="1609235463212" duration="1855000" />
+      <workItem from="1609271880239" duration="972000" />
+      <workItem from="1609284278262" duration="1648000" />
+      <workItem from="1609341050014" duration="5755000" />
     </task>
     <servers />
   </component>

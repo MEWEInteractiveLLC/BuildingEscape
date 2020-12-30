@@ -49128,6 +49128,8 @@
           <e p="BuildingEscapeGameModeBase.cpp" t="Include" />
           <e p="BuildingEscapeGameModeBase.h" t="Include" />
           <e p="Components" t="Include">
+            <e p="Grabber.cpp" t="Include" />
+            <e p="Grabber.h" t="Include" />
             <e p="OpenDoor.cpp" t="Include" />
             <e p="OpenDoor.h" t="Include" />
             <e p="WorldPosition.cpp" t="Include" />

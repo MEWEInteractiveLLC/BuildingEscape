@@ -29,13 +29,22 @@ private:
 
 #pragma region Private Variable
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
-	float TargetYaw = 90.f;
+	float TargetYaw = 90.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
-	float OpeningSpeed = 0.02f;
+	float OpeningSpeed = 30.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
+	float ClosingSpeed = 30.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
+	float DoorCloseDelay = 2.0f;
 
 	float InitialYaw;
 	float CurrentYaw;
+
+	
+	float DoorLastOpened = 0.0f;
 #pragma endregion
 	
 
@@ -46,6 +55,8 @@ private:
 #pragma region Private Functions
 
 	void OpenDoor(float DeltaTime);
+
+	void CloseDoor(float DeltaTime);
 	
 #pragma endregion 
 
