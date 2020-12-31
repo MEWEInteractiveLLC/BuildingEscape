@@ -19,12 +19,6 @@ UWorldPosition::UWorldPosition()
 void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	AActor* Owner =  Cast<AActor>(GetOwner());
-
-	UE_LOG(LogTemp, Warning, TEXT("The Object name is: %s"), *Owner->GetName());
-	UE_LOG(LogTemp, Warning, TEXT("The Objects World Location is: %s"), *Owner->GetActorLocation().ToString());
-
 	// ...
 	
 }

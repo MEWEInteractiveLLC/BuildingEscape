@@ -48,7 +48,7 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	{
 		OpenDoor(DeltaTime);
 		DoorLastOpened = GetWorld()->GetTimeSeconds();
-		UE_LOG(LogTemp, Warning, TEXT("The door was open %f seconds ago"), DoorLastOpened);
+		
 
 	}
 	else

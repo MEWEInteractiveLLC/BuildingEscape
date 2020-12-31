@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+
+
 #include "Grabber.generated.h"
 
 
@@ -22,6 +24,30 @@ protected:
 
 public:
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
-	                           FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType,FActorComponentTickFunction* ThisTickFunction) override;
+
+
+
+protected:
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Grabber Settings")
+	float Reach = 100.0f;
+
+
+private:
+
+	class UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	class UInputComponent* InputComponent = nullptr;
+
+
+
+
+protected:
+
+	void InteractWithObject();
 };
+
+
+
+
