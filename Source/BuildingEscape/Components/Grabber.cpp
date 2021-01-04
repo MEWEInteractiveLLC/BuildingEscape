@@ -33,19 +33,11 @@ void UGrabber::BeginPlay()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	APlayerController* PC = GetWorld()->GetFirstPlayerController();
-
-	FVector Location;
-	FRotator Rotation;
-
-	PC->GetPlayerViewPoint(OUT Location, OUT Rotation);
-
-	FVector LineTraceEnd = Location + (Rotation.Vector() * Reach);
-
+	
+	if (!PhysicsHandle) { return; }
 	if (PhysicsHandle->GrabbedComponent)
 	{
-		PhysicsHandle->SetTargetLocation(LineTraceEnd);	
+		PhysicsHandle->SetTargetLocation(GetLineTraceEnd());	
 	}
 }
 
@@ -53,10 +45,24 @@ void UGrabber::FindPhysicsHandle()
 {
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
 	
-	if (PhysicsHandle == nullptr)
+	if (!PhysicsHandle)
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s does not have a 'Physics Handle' Component attached! Please add one in the blueprint class"), *GetOwner()->GetName());		
 	}
+}
+
+FVector UGrabber::GetLineTraceEnd()
+{
+	APlayerController* PC = GetWorld()->GetFirstPlayerController();
+
+	FVector Location;
+	FRotator Rotation;
+
+	PC->GetPlayerViewPoint(OUT Location, OUT Rotation);
+
+	return Location + (Rotation.Vector() * Reach);
+
+	
 }
 
 FHitResult UGrabber::GetFirstPhysicsActorInReach() const
@@ -69,10 +75,6 @@ FHitResult UGrabber::GetFirstPhysicsActorInReach() const
 	PC->GetPlayerViewPoint(OUT Location, OUT Rotation);
 
 	FVector LineTraceEnd = Location + (Rotation.Vector() * Reach);
-
-	
-
-	//UE_LOG(LogTemp, Warning, TEXT("The Location Is %s, and the Rotation is %s"), *Location.ToString(), *Rotation.ToString());
 
 	FHitResult Hit;
 	FCollisionQueryParams Params;
@@ -105,10 +107,12 @@ void UGrabber::PickUpObject()
 {
 	FHitResult Hit = GetFirstPhysicsActorInReach();
 
-	if (Hit.GetActor())
+	AActor* HitActor = Hit.GetActor();
+	
+	if (HitActor)
 	{
 		UPrimitiveComponent* ComponentToGrab = Hit.GetComponent();
-
+		if (!PhysicsHandle) { return; }
 		PhysicsHandle->GrabComponentAtLocation( ComponentToGrab, NAME_None, Hit.Location);
 	}
 
@@ -117,6 +121,8 @@ void UGrabber::PickUpObject()
 
 void UGrabber::ReleaseObject()
 {
+	if (!PhysicsHandle) { return; }
+	
 	if (PhysicsHandle->GrabbedComponent)
 	{
 		PhysicsHandle->ReleaseComponent();

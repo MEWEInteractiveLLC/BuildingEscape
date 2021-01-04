@@ -7,8 +7,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7deb1c8f-4884-419b-a595-c21aeffdc3c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BuildingEscape/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_DefaultPawn.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_DefaultPawn.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Sandbox.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +24,11 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.cpp" />
+      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.h" />
       <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.h" />
       <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/OpenDoor.cpp" />
-      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/WorldPosition.cpp" />
-      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.h" />
-      <option value="$PROJECT_DIR$/Source/BuildingEscape/Components/Grabber.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mGFfVuq56qDpanP6YLEgUC7RaJ" />
@@ -376,7 +380,7 @@
       <workItem from="1609451729743" duration="3843000" />
       <workItem from="1609614833880" duration="3362000" />
       <workItem from="1609666420172" duration="1639000" />
-      <workItem from="1609742683802" duration="729000" />
+      <workItem from="1609742683802" duration="6684000" />
     </task>
     <servers />
   </component>

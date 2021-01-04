@@ -40,8 +40,14 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
 	float DoorCloseDelay = 2.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess="true"), Category="Door Settings")
+	float MassToOpen = 50.0f;
+
 	float InitialYaw;
 	float CurrentYaw;
+
+	UPROPERTY()
+	class UAudioComponent* AudioComponent = nullptr;
 
 	
 	float DoorLastOpened = 0.0f;
@@ -57,6 +63,13 @@ private:
 	void OpenDoor(float DeltaTime);
 
 	void CloseDoor(float DeltaTime);
+
+	float GetTotalMassOfActors() const;
+
+	void FindAudioComponent();
+
+	bool OpenDoorSound = false;
+	bool CloseDoorSound = true;
 	
 #pragma endregion 
 
@@ -67,9 +80,6 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	class ATriggerVolume* PressurePlate;
-
-	UPROPERTY(EditAnywhere)
-	AActor* ActorThatOpensDoor;
 	
 #pragma endregion
 

@@ -33,8 +33,10 @@ protected:
 private:
 
 
+	UPROPERTY()
 	class UPhysicsHandleComponent* PhysicsHandle = nullptr;
 
+	UPROPERTY()
 	class UInputComponent* InputComponent = nullptr;
 
 	bool bIsTryingToInteract = false;
@@ -47,6 +49,8 @@ protected:
 	void SetupInputComponent();
 	
 	void FindPhysicsHandle();
+
+	FVector GetLineTraceEnd();
 
 	FHitResult GetFirstPhysicsActorInReach() const;
 
