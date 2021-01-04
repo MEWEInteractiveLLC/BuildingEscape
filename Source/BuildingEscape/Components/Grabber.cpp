@@ -13,37 +13,23 @@ UGrabber::UGrabber()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
 // Called when the game starts
+
 void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
-	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	FindPhysicsHandle();
 
-	InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
-
-	if (InputComponent)
-	{
-		InputComponent->BindAction("Interact", IE_Pressed, this, &UGrabber::InteractWithObject);
-	}
-
-	
-	if (PhysicsHandle == nullptr)
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s does not have a 'Physics Handle' Component attached! Please add one in the blueprint class"), *GetOwner()->GetName());		
-	}
-
-	// ...
-	
+	SetupInputComponent();
 }
 
 
 // Called every frame
+
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -57,7 +43,34 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 
 	FVector LineTraceEnd = Location + (Rotation.Vector() * Reach);
 
-	DrawDebugLine(GetWorld(), Location, LineTraceEnd, FColor::Red, false, 0.1f, 0, 2.0f);
+	if (PhysicsHandle->GrabbedComponent)
+	{
+		PhysicsHandle->SetTargetLocation(LineTraceEnd);	
+	}
+}
+
+void UGrabber::FindPhysicsHandle()
+{
+	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	
+	if (PhysicsHandle == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s does not have a 'Physics Handle' Component attached! Please add one in the blueprint class"), *GetOwner()->GetName());		
+	}
+}
+
+FHitResult UGrabber::GetFirstPhysicsActorInReach() const
+{
+	APlayerController* PC = GetWorld()->GetFirstPlayerController();
+
+	FVector Location;
+	FRotator Rotation;
+
+	PC->GetPlayerViewPoint(OUT Location, OUT Rotation);
+
+	FVector LineTraceEnd = Location + (Rotation.Vector() * Reach);
+
+	
 
 	//UE_LOG(LogTemp, Warning, TEXT("The Location Is %s, and the Rotation is %s"), *Location.ToString(), *Rotation.ToString());
 
@@ -72,11 +85,41 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		UE_LOG(LogTemp, Warning, TEXT("Has hit %s"), *Hit.Actor->GetName());
 	}
 
-	// ...
+	return Hit;
+	
+	
 }
 
-void UGrabber::InteractWithObject()
+void UGrabber::SetupInputComponent()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Interacting With Object"));
+	InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
+
+	if (InputComponent)
+	{
+		InputComponent->BindAction("Interact", IE_Pressed, this, &UGrabber::PickUpObject);
+		InputComponent->BindAction("Interact", IE_Released, this, &UGrabber::ReleaseObject);
+	}
 }
 
+void UGrabber::PickUpObject()
+{
+	FHitResult Hit = GetFirstPhysicsActorInReach();
+
+	if (Hit.GetActor())
+	{
+		UPrimitiveComponent* ComponentToGrab = Hit.GetComponent();
+
+		PhysicsHandle->GrabComponentAtLocation( ComponentToGrab, NAME_None, Hit.Location);
+	}
+
+	
+}
+
+void UGrabber::ReleaseObject()
+{
+	if (PhysicsHandle->GrabbedComponent)
+	{
+		PhysicsHandle->ReleaseComponent();
+	}
+	
+}
